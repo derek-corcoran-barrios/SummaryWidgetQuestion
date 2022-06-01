@@ -1,3 +1,18 @@
+```{r reprex-options, include = FALSE}
+options(
+  keep.source = TRUE,
+  rlang_trace_top_env = globalenv(),
+  `rlang:::force_unhandled_error` = TRUE,
+  rlang_backtrace_on_error = "full",
+  crayon.enabled = FALSE,
+  reprex.current_venue = "gh"
+)
+```
+
+```{r, results = 'asis', echo = FALSE, include = file.exists('.Rprofile'), eval = file.exists('.Rprofile')}
+cat(sprintf("*Local `.Rprofile` detected at `%s`*", normalizePath(".Rprofile")))
+```
+
 ---
 output:
   reprex::reprex_document:
@@ -31,3 +46,15 @@ knitr::include_graphics("TheirImage.png")
 
 But I copied exactly their code, any idea on what I am doing wrong?
 
+
+<details style="margin-bottom:10px;">
+<summary>Standard output and standard error</summary>
+`/home/derek/Documents/SummaryWidgetQuestion/ReprexQuestion_reprex_std_out_err.txt`
+</details>
+
+<details style="margin-bottom:10px;">
+<summary>Session info</summary>
+```{r }
+sessioninfo::session_info()
+```
+</details>
